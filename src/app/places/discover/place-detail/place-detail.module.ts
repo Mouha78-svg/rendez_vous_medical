@@ -1,13 +1,12 @@
-import { forwardRef, NgModule } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA, forwardRef, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { NG_VALUE_ACCESSOR, ReactiveFormsModule } from '@angular/forms';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
 import { PlaceDetailPageRoutingModule } from './place-detail-routing.module';
 
 import { PlaceDetailPage } from './place-detail.page';
-import { CreateBookingModule } from 'src/app/bookings/create-booking/create-booking.module';
 
 @NgModule({
   imports: [
@@ -15,9 +14,9 @@ import { CreateBookingModule } from 'src/app/bookings/create-booking/create-book
     ReactiveFormsModule,
     IonicModule,
     PlaceDetailPageRoutingModule,
-    CreateBookingModule,
   ],
   providers: [],
   declarations: [PlaceDetailPage],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
 export class PlaceDetailPageModule {}
